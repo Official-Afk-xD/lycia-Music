@@ -1,4 +1,4 @@
-# Copyright (C) 2021 By adityaProject
+# Copyright (C) 2021 By Log Afk
 # Originally written by levina on github
 # Broadcast function
 
