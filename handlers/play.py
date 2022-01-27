@@ -161,27 +161,17 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
+                    InlineKeyboardButton("🚑 Support", url=f"t.me/Blaze_Support"),
+                    InlineKeyboardButton("Updates 📢", url=f"t.me/The_Blaze_Network"),
+                ],
+                [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="𝐒𝐦𝐨𝐊𝐞𝐫 🚬",
-                            url=f"https://t.me/Sanki_Owner"),
-                            
-                    InlineKeyboardButton(
-                            text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/Smoker_Feelings")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
-                   
-                ]
-            ]
-        )
+                       "📨 Chat zone", url=f"https://t.me/UNIQUE_SOCIETY"
+                ),
+                InlineKeyboardButton("Chitchat 📨", url=f"https://t.me/All_Dear_Comrade"),
+            ],
+        ]
+    )
 
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -214,27 +204,17 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
+                    InlineKeyboardButton("🚑 Support", url=f"t.me/Blaze_Support"),
+                    InlineKeyboardButton("Updates 📢", url=f"t.me/The_Blaze_Network"),
+                ],
+                [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="𝐒𝐦𝐨𝐊𝐞𝐫 🚬",
-                            url=f"https://t.me/Sanki_Owner"),
-                            
-                    InlineKeyboardButton(
-                            text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/Smoker_Feelings")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
-                   
-                ]
-            ]
-        )
+                       "📨 Chat zone", url=f"https://t.me/UNIQUE_SOCIETY"
+                ),
+                InlineKeyboardButton("Chitchat 📨", url=f"https://t.me/All_Dear_Comrade"),
+            ],
+        ]
+    )
 
         except Exception as e:
             title = "NaN"
@@ -244,31 +224,21 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
+                    InlineKeyboardButton("🚑 Support", url=f"t.me/Blaze_Support"),
+                    InlineKeyboardButton("Updates 📢", url=f"t.me/The_Blaze_Network"),
+                ],
+                [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="𝐒𝐦𝐨𝐊𝐞𝐫 🚬",
-                            url=f"https://t.me/Sanki_Owner"),
-                            
-                    InlineKeyboardButton(
-                            text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/Smoker_Feelings")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
-                   
-                ]
-            ]
-        )
+                       "📨 Chat zone", url=f"https://t.me/UNIQUE_SOCIETY"
+                ),
+                InlineKeyboardButton("Chitchat 📨", url=f"https://t.me/All_Dear_Comrade"),
+            ],
+        ]
+    )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀**"
+                f"**😒 Song Longer Than  {DURATION_LIMIT} minutes aren't allowed to play ▶ **"
             )
             return
         requested_by = message.from_user.first_name
@@ -277,9 +247,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "✌𝐖𝐡𝐚𝐭'𝐒 𝐓𝐡𝐞 ❤️ 𝐒𝐨𝐧𝐠 🎸 𝐘𝐨𝐮 🎧 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️**"
+                "😒 Please write the name of the song you want to play ?"
             )
-        await lel.edit("🔎")
+        await lel.edit("🔄 Processing...")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -304,7 +274,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🌸° 𝐒𝐨𝐧𝐠 🎸 𝐍𝐨𝐭 😒 𝐅𝐨𝐮𝐧𝐝 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 ° 🥀.**"
+                "**😒 Song Not Found...**"
             )
             print(str(e))
             return
@@ -312,31 +282,21 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
+                    InlineKeyboardButton("🚑 Support", url=f"t.me/Blaze_Support"),
+                    InlineKeyboardButton("Updates 📢", url=f"t.me/The_Blaze_Network"),
+                ],
+                [
                     InlineKeyboardButton(
-                            text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
-               ],
-               [
-                    InlineKeyboardButton(
-                            text="𝐒𝐦𝐨𝐊𝐞𝐫 🚬",
-                            url=f"https://t.me/Sanki_Owner"),
-                            
-                    InlineKeyboardButton(
-                            text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/Smoker_Feelings")
-               ],
-               [
-                        InlineKeyboardButton(
-                            text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
-                   
-                ]
-            ]
-        )
+                       "📨 Chat zone", url=f"https://t.me/UNIQUE_SOCIETY"
+                ),
+                InlineKeyboardButton("Chitchat 📨", url=f"https://t.me/All_Dear_Comrade"),
+            ],
+        ]
+    )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀**"
+                f"**😒 Song longer than {DURATION_LIMIT} Minutes aren't Allowed to play ▶ **"
             )
             return
         requested_by = message.from_user.first_name
@@ -350,7 +310,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="****❰ 𝐌𝐮𝐬𝐢𝐜'𝐗 ❘ 𝐞𝐒𝐩𝐨𝐫𝐭 😈 ❱ 𝐒𝐨𝐧𝐠 ❤️ 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 💫🤟** {}**".format(position),
+            caption="****🥀 Playing Music Position... ** {}**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -367,7 +327,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**❰ 𝐌𝐮𝐬𝐢𝐜'𝐗 ❘ 𝐞𝐒𝐩𝐨𝐫𝐭 😈 ❱ Now 😄 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 📀 𝐀𝐭 🤟 `{}`...**".format(
+            caption="**Music Now Playing ..🎶 At ➪ `{}`...**".format(
         message.chat.title
         ), )
 
