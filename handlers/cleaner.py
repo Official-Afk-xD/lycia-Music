@@ -1,4 +1,4 @@
-# Copyright (C) 2022 By #SmokerMusicX
+# Copyright (C) 2022 By #Official-Music
 
 import os
 from pyrogram import Client, filters
