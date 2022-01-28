@@ -323,13 +323,14 @@ async def play(_, message: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-
-        await m.reply_photo(
-                                photo=image,
-                                caption=f"🏷 **Name:** [{songname[:22]}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}"format(
-        message.chat.title
-        ), )
-
-    os.remove("final.png")
-    return await lel.delete()
-    
+            add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
+            await suhu.delete()
+            requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
+            await m.reply_photo(
+               photo=image,
+               caption=f"🏷 **Name:** [{songname[:22]}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+               reply_markup=keyboard,
+           )
+            except Exception as ep:
+               await suhu.delete()
+               await m.reply_text(f"💬 error: `{ep}`")
