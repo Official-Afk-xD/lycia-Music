@@ -323,7 +323,7 @@ async def play(_, message: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-            add_to_queue(songname, ytlink, url, "Audio", 0)
+
             await suhu.delete()
             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
             await m.reply_photo(
