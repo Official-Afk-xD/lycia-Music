@@ -324,10 +324,10 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             )
 
-         await message.reply_photo(
+        await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**Music Now Playing ..🎶 At ➪ `{}`...**".format(
+            caption="**❰ 𝐌𝐮𝐬𝐢𝐜'𝐗 ❘ 𝐀𝐥𝐨𝐧𝐞 😈 ❱ Now 😄 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 📀 𝐀𝐭 🤟 `{}`...**".format(
         message.chat.title
         ), )
 
