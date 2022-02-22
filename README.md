@@ -16,5 +16,11 @@
 <p><a href="https://replit.com/@levinalab/Session-Generator?lite=1&outputonly=1#main.py"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
 
 
+## Contact & Support
+
+<a href="https://t.me/Blaze_support"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a><br>
+<a href="https://t.me/the_Blaze_Network"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a><br>
+<a href="https://t.me/log_afk"><img src="https://img.shields.io/badge/Contact-Repo%20Owner-blue.svg?style=for-the-badge&logo=Telegram"></a>
+
 
 
