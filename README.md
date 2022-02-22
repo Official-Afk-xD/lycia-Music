@@ -1,9 +1,9 @@
-# OFFICIAL MUSICX
+# OFFICIAL MUSIC
 
 ### Best Smart Voice Chat Music Bot For Telegram Groups ...
 
 
-<p align="center"><a href="https://t.me/log_afk"><img src="https://telegra.ph/file/a2ed1401a210ce09c9788.jpg"></a></p>
+<p align="center"><a href="https://t.me/log_afk"><img src="https://telegra.ph/file/4cee546f83f7a9573d329.jpg"></a></p>
 
 
 # ʜᴇʀoᴋᴜ ᴅᴇᴘʟᴏʏ
@@ -12,7 +12,9 @@
 
 ꜱᴛʀɪɴɢ ɴᴀᴍᴇ:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-brown)](https://replit.com/@HEXOROP/eSportMusic)
+<h4> Generate Session via Repl.it: </h4>    
+<p><a href="https://replit.com/@levinalab/Session-Generator?lite=1&outputonly=1#main.py"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="200""/></a></p>
+
 
 
 
