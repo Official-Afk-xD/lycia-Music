@@ -1,6 +1,3 @@
-## Made By @Yash-Sharma-1807
-## telegram.dog/YASH_SHARMA_1807?start=papa
-
 
 
 
