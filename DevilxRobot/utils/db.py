@@ -7,19 +7,19 @@ __all__ = ['get_collection']
 import asyncio
 from motor.motor_asyncio import AsyncIOMotorClient
 from motor.core import AgnosticClient, AgnosticDatabase, AgnosticCollection
-from AsukaRobot import MONGO_DB_URI as DB_URL
+from DevilxRobot import MONGO_DB_URI as DB_URL
 
 print("Connecting to Database ...")
 
 _MGCLIENT: AgnosticClient = AsyncIOMotorClient(DB_URL)
 _RUN = asyncio.get_event_loop().run_until_complete
 
-if "Asuka" in _RUN(_MGCLIENT.list_database_names()):
-    print("Asuka Database Found :) => Now Logging to it...")
+if "DevilxRobot" in _RUN(_MGCLIENT.list_database_names()):
+    print("DevilxRobot Database Found :) => Now Logging to it...")
 else:
-    print("Asuka Database Not Found :( => Creating New Database...")
+    print("DevilxRobot Database Not Found :( => Creating New Database...")
 
-_DATABASE: AgnosticDatabase = _MGCLIENT["Asuka"]
+_DATABASE: AgnosticDatabase = _MGCLIENT["DevilxRobot"]
 
 
 def get_collection(name: str) -> AgnosticCollection:
