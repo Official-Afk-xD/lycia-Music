@@ -11,17 +11,17 @@ from typing import List
 from typing import Optional
 from pyrogram import Client, idle, filters
 
-import AsukaRobot.modules.sql.users_sql as sql
-from AsukaRobot.modules.sudoers import bot_sys_stats as bss
+import DevilxRobot.modules.sql.users_sql as sql
+from DevilxRobot.modules.sudoers import bot_sys_stats as bss
 
-from AsukaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from DevilxRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater, pgram, pbot)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from AsukaRobot.modules import ALL_MODULES
-from AsukaRobot.modules.helper_funcs.chat_status import is_user_admin
-from AsukaRobot.modules.helper_funcs.misc import paginate_modules
+from DevilxRobot.modules import ALL_MODULES
+from DevilxRobot.modules.helper_funcs.chat_status import is_user_admin
+from DevilxRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -183,7 +183,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("AsukaRobot.modules." +
+    imported_module = importlib.import_module("DevilxRobot.modules." +
                                               module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
@@ -747,7 +747,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 5132611794 and DONATION_LINK:
+        if OWNER_ID != 5052969674 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -792,20 +792,20 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             name = dispatcher.bot.first_name
-            m = dispatcher.bot.send_photo(f"@{SUPPORT_CHAT}", Asuka_DISPACHER_PIC, caption=f"*{name} Started!\n• Evangelion Unit-02 Booted Up!\n*• Let's Get The Party Started!", parse_mode=ParseMode.MARKDOWN,
+            m = dispatcher.bot.send_photo(f"@{SUPPORT_CHAT}", DevilxRobot_DISPACHER_PIC, caption=f"*{name} Started!\n• Evangelion Unit-02 Booted Up!\n*• Let's Get The Party Started!", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
                        InlineKeyboardButton(
                              text="Off-Topic",
-                             url="https://t.me/Anime_Chat_XKaizuryu")
+                             url="https://t.me/Team_Bot_Support")
                      ]
                 ]
             ),
         )
         except Unauthorized:
             LOGGER.warning(
-                "Asuka can't able to send message to support_chat, go and check!")
+                "DevilxRobot can't able to send message to support_chat, go and check!")
         except BadRequest as e:
             LOGGER.warning(e.message)
 
@@ -820,8 +820,8 @@ def main():
     settings_callback_handler = CallbackQueryHandler(
         settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(asuka_callback_data, pattern=r"asuka_")
-    asuka_callback_handler = CallbackQueryHandler(about_callback_data, pattern=r"about_")
+    about_callback_handler = CallbackQueryHandler(DevilxRobot_callback_data, pattern=r"DevilxRobot_")
+    DevilxRobot_callback_handler = CallbackQueryHandler(about_callback_data, pattern=r"about_")
     repo_callback_handler = CallbackQueryHandler(repo_callback_data, pattern=r"repo_")
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate,
