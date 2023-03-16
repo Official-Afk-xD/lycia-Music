@@ -4,7 +4,7 @@ import sys
 import time
 import spamwatch
 import aiohttp
-from AsukaRobot.services.quoteapi import Quotly
+from DevilxRobot.services.quoteapi import Quotly
 import telegram.ext as tg
 from redis import StrictRedis
 from Python_ARQ import ARQ
@@ -27,7 +27,7 @@ logging.basicConfig(
               logging.StreamHandler()],
     level=logging.INFO)
 
-LOGGER = logging.getLogger("[AsukaRobot]")
+LOGGER = logging.getLogger("[DevilxRobot]")
 
 log = logging.getLogger('[Your Bot Is Building]')
 
@@ -108,7 +108,7 @@ if ENV:
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "lightYagami")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Tushyweb")
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     BOT_NAME = os.environ.get("BOT_NAME", True) # Name Of your Bot.4
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # Bot Username
@@ -129,7 +129,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
     
 else:
-    from AsukaRobot.config import Development as Config
+    from DevilxRobot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -228,8 +228,8 @@ aiohttpsession = ClientSession()
 print("Connecting ARQ Client")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("Asuka", API_ID, API_HASH)
-pbot = Client("AsukaRobotpbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+telethn = TelegramClient("DevilxRobot", API_ID, API_HASH)
+pbot = Client("DevilxRobotpbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 dispatcher = updater.dispatcher
 
@@ -240,7 +240,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from AsukaRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
+from DevilxRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
                                                         CustomMessageHandler,
                                                         CustomRegexHandler)
 
