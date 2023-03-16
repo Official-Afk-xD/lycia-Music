@@ -1,7 +1,7 @@
 {
       "name": "Asuka",
-      "description": "An Anime themed Telegram group management bot.",
-      "logo": "https://telegra.ph/file/ace91d9ae6af3881d3940.jpg",
+      "description": "I Am Telegram group management bot.",
+      "logo": "https://telegra.ph/file/58c2c310374fb71be9ed8.jpg",
       "keywords": [
          "telegram",
          "anime",
@@ -9,7 +9,7 @@
          "manager",
          "Asuka"
       ],   
-   "repository": "https://github.com/Official-Afk-xD/Tg-Managment",
+   "repository": "https://github.com/Official-Afk-xD/DevilXrobot",
    "addons": [
       {
          "options": {
@@ -37,41 +37,41 @@
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db.",
          "required": true,
-         "value": ""
+         "value": "postgresql://mdlvmzqu:4b3O7MHgLNkocX_9ey9yjb_k3v5lgHOk@castor.db.elephantsql.com/mdlvmzqu"
       },  
       "DATABASE_URL": {
          "description": "Your postgres sql db.",
          "required": true,
-         "value": ""
+         "value": "postgresql://mdlvmzqu:4b3O7MHgLNkocX_9ey9yjb_k3v5lgHOk@castor.db.elephantsql.com/mdlvmzqu"
       },  
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "5132611794"
+         "value": "5052969674"
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": ""
+         "value": "official_pro_xD"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Asuka support than consider you made an enemy.",
          "required": true,
-         "value": "AsukaSupport"
+         "value": "Team_Bot_Support"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": ""
+         "value": "-1001916811830"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": ""
+         "value": "-1001916811830"
       },
       "ARQ_API_KEY": {
          "description": "For Some Modules. Get it from @ArqRobot",
          "required": true,
-         "value": ""
+         "value": "HYXGKW-MZIUAK-GCBKVG-EHHTKY-ARQ"
       },
       "ARQ_API_URL": {
          "description": "Uses For Arq Modules. Don't Change Anything Just Leave It.",
@@ -91,12 +91,12 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Asuka support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "5132611794"
+         "value": "5052969674"
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
-         "value": ""
+         "value": "e9cSzrxhQssnDITqI8dhESnPrNXElaA8iPss1A70ymyAiSr7nd1vm1llKXI~MNC6"
       }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
@@ -109,22 +109,22 @@
       "MONGO_DB_URI": {
          "description": "Your Mongo DB url.",
          "required": false,
-         "value": ""
+         "value": "mongodb+srv://bsdk:betichod@cluster0.fgj1r9z.mongodb.net/?retryWrites=true&w=majority"
       },
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": ""
+         "value": "5052969674"
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": ""
+         "value": "5052969674"
       },
       "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": ""
+         "value": "5052969674"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
@@ -167,7 +167,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it",
          "required": false,
-         "value": "https://t.me/xelcius"
+         "value": "https://t.me/Team_Bot_Update"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
