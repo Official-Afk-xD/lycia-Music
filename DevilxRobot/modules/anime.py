@@ -9,7 +9,7 @@ from telegram import (
 import requests
 import math
 import time
-from AsukaRobot.modules.helper_funcs.decorators import Asukacmd
+from DevilxRobot.modules.helper_funcs.decorators import DevilxRobotcmd
 
 def shorten(description, info="anilist.co"):
     msg = ""
@@ -353,7 +353,7 @@ def manga(update: Update, context: CallbackContext):
             )
 
 
-from AsukaRobot.modules.language import gs
+from DevilxRobot.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "anilist_help")
