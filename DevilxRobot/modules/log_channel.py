@@ -4,7 +4,7 @@ from functools import wraps
 from telegram.ext import CallbackContext
 from DevilxRobot.modules.helper_funcs.decorators import Asukacmd, Asukacallback
 from DevilxRobot.modules.helper_funcs.misc import is_module_loaded
-from AsukaRobot.modules.language import gs
+from DevilxRobot.modules.language import gs
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
