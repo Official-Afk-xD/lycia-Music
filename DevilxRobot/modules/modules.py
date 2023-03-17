@@ -1,11 +1,11 @@
 import importlib
 import collections
 
-from AsukaRobot import dispatcher, telethn
-from AsukaRobot.__main__ import (CHAT_SETTINGS, DATA_EXPORT, DATA_IMPORT,
+from DevilxRobot import dispatcher, telethn
+from DevilxRobot.__main__ import (CHAT_SETTINGS, DATA_EXPORT, DATA_IMPORT,
                                    HELPABLE, IMPORTED, MIGRATEABLE, STATS,
                                    USER_INFO, USER_SETTINGS)
-from AsukaRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from DevilxRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
