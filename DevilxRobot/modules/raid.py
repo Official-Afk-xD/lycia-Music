@@ -1,4 +1,4 @@
-# Raid module by Luke (t.me/itsLuuke)
+
 import html
 from typing import Optional
 from datetime import timedelta
@@ -11,10 +11,10 @@ from telegram.utils.helpers import mention_html
 from .log_channel import loggable
 from .helper_funcs.anonymous import user_admin, AdminPerms
 from .helper_funcs.chat_status import bot_admin, connection_status, user_admin_no_reply
-from .helper_funcs.decorators import Asukacmd, Asukacallback
+from .helper_funcs.decorators import DevilxRobotcmd, DevilxRobotcallback
 from .. import LOGGER, updater
 
-import AsukaRobot.modules.sql.welcome_sql as sql
+import DevilxRobot.modules.sql.welcome_sql as sql
 
 j = updater.job_queue
 
@@ -137,7 +137,7 @@ def enable_raid_cb(update: Update, ctx: CallbackContext) -> Optional[str]:
     )
 
 
-@Asukacallback(pattern="disable_raid=")
+@DevilxRobotcallback(pattern="disable_raid=")
 @connection_status
 @user_admin_no_reply
 @loggable
@@ -163,7 +163,7 @@ def disable_raid_cb(update: Update, _: CallbackContext) -> Optional[str]:
     return logmsg
 
 
-@Asukacallback(pattern="cancel_raid=")
+@DevilxRobotcallback(pattern="cancel_raid=")
 @connection_status
 @user_admin_no_reply
 def disable_raid_cb(update: Update, _: CallbackContext):
@@ -174,7 +174,7 @@ def disable_raid_cb(update: Update, _: CallbackContext):
         parse_mode=ParseMode.HTML)
 
 
-@Asukacmd(command="raidtime")
+@DevilxRobotcmd(command="raidtime")
 @connection_status
 @loggable
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
@@ -208,7 +208,7 @@ def raidtime(update: Update, context: CallbackContext) -> Optional[str]:
         msg.reply_text("Unknown time given, give me something like 5m or 1h", parse_mode=ParseMode.HTML)
 
 
-@Asukacmd(command="raidactiontime", pass_args=True)
+@DevilxRobotcmd(command="raidactiontime", pass_args=True)
 @connection_status
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 @loggable
