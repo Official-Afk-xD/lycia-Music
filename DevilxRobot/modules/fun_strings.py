@@ -368,7 +368,4 @@ SEX  = (
     "I'm Ready For A White Shower, Daddy!")
 
 HEMTAI  = (
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",)
-
+    "• [Support](https://t.me/Team_Bot_Support) \n• [Updates](https://t.me/team_bot_update)",
