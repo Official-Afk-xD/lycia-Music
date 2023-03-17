@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from AsukaRobot import TIGERS, WOLVES, dispatcher
-from AsukaRobot.modules.helper_funcs.chat_status import (
+from DevilxRobot import TIGERS, WOLVES, dispatcher
+from DevilxRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.sql import antiflood_sql as sql
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from AsukaRobot.modules.helper_funcs.string_handling import extract_time
-from AsukaRobot.modules.connection import connected
-from AsukaRobot.modules.helper_funcs.alternate import send_message
-from AsukaRobot.modules.sql.approve_sql import is_approved
+from DevilxRobot.modules.helper_funcs.string_handling import extract_time
+from DevilxRobot.modules.connection import connected
+from DevilxRobot.modules.helper_funcs.alternate import send_message
+from DevilxRobot.modules.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 
