@@ -12,11 +12,11 @@ from telegram.ext import (
     CommandHandler,
 )
 
-import AsukaRobot.modules.sql.users_sql as sql
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from AsukaRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from AsukaRobot.modules.sql.users_sql import get_all_users
+import DevilxRobot.modules.sql.users_sql as sql
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from DevilxRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from DevilxRobot.modules.sql.users_sql import get_all_users
 
 
 USERS_GROUP = 4
