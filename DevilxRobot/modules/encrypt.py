@@ -3,8 +3,8 @@
 import os
 import secureme
 
-from AsukaRobot import telethn
-from AsukaRobot.events import register
+from DevilxRobot import telethn
+from DevilxRobot.events import register
 
 @register(pattern="^/encrypt ?(.*)")
 async def hmm(event):
