@@ -2,13 +2,13 @@ import re, ast, random
 from io import BytesIO
 from typing import Optional
 
-import AsukaRobot.modules.sql.notes_sql as sql
-from AsukaRobot import LOGGER, dispatcher, DRAGONS
-from AsukaRobot.modules.helper_funcs.chat_status import connection_status
-from AsukaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from AsukaRobot.modules.helper_funcs.msg_types import get_note_type
-from AsukaRobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from AsukaRobot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
+import DevilxRobot.modules.sql.notes_sql as sql
+from DevilxRobot import LOGGER, dispatcher, DRAGONS
+from DevilxRobot.modules.helper_funcs.chat_status import connection_status
+from DevilxRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from DevilxRobot.modules.helper_funcs.msg_types import get_note_type
+from DevilxRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from DevilxRobot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
 from telegram import (
     MAX_MESSAGE_LENGTH,
     InlineKeyboardMarkup,
@@ -24,7 +24,7 @@ from telegram.ext import (
     Filters,
 )
 
-from AsukaRobot.modules.helper_funcs.decorators import Asukacmd, Asukamsg, Asukacallback
+from DevilxRobot.modules.helper_funcs.decorators import DevilxRobotcmd, DevilxRobotmsg, DevilxRobotcallback
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
@@ -211,7 +211,7 @@ def get(update, context, notename, show_none=True, no_format=False):
         message.reply_text("This note doesn't exist")
 
 
-@Asukacmd(command="get")
+@DevilxRobotcmd(command="get")
 @connection_status
 def cmd_get(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
@@ -224,7 +224,7 @@ def cmd_get(update: Update, context: CallbackContext):
 
 
 
-@Asukamsg((Filters.regex(r"^#[^\s]+")), group=-14)
+@DevilxRobotmsg((Filters.regex(r"^#[^\s]+")), group=-14)
 @connection_status
 def hash_get(update: Update, context: CallbackContext):
     message = update.effective_message.text
@@ -234,7 +234,7 @@ def hash_get(update: Update, context: CallbackContext):
 
 
 
-@Asukamsg((Filters.regex(r"^/\d+$")), group=-16)
+@DevilxRobotmsg((Filters.regex(r"^/\d+$")), group=-16)
 @connection_status
 def slash_get(update: Update, context: CallbackContext):
     message, chat_id = update.effective_message.text, update.effective_chat.id
@@ -248,7 +248,7 @@ def slash_get(update: Update, context: CallbackContext):
     except IndexError:
         update.effective_message.reply_text("Wrong Note ID 😾")
 
-@Asukacmd(command='save')
+@DevilxRobotcmd(command='save')
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 @connection_status
 def save(update: Update, context: CallbackContext):
@@ -290,7 +290,7 @@ def save(update: Update, context: CallbackContext):
             )
         return
 
-@Asukacmd(command='clear')
+@DevilxRobotcmd(command='clear')
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 @connection_status
 def clear(update: Update, context: CallbackContext):
@@ -307,7 +307,7 @@ def clear(update: Update, context: CallbackContext):
         update.effective_message.reply_text("Provide a notename.")
 
 
-@Asukacmd(command='removeallnotes')
+@DevilxRobotcmd(command='removeallnotes')
 def clearall(update: Update, context: CallbackContext):
     chat = update.effective_chat
     user = update.effective_user
@@ -334,7 +334,7 @@ def clearall(update: Update, context: CallbackContext):
         )
 
 
-@Asukacallback(pattern=r"notes_.*")
+@DevilxRobotcallback(pattern=r"notes_.*")
 def clearall_btn(update: Update, context: CallbackContext):
     query = update.callback_query
     chat = update.effective_chat
@@ -366,7 +366,7 @@ def clearall_btn(update: Update, context: CallbackContext):
             query.answer("You need to be admin to do this.")
 
 
-@Asukacmd(command=["notes", "saved"])
+@DevilxRobotcmd(command=["notes", "saved"])
 @connection_status
 def list_notes(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
@@ -509,7 +509,7 @@ def __chat_settings__(chat_id, user_id):
     notes = sql.get_all_chat_notes(chat_id)
     return f"There are `{len(notes)}` notes in this chat."
 
-from AsukaRobot.modules.language import gs
+from DevilxRobot.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "notes_help")
