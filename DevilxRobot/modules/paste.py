@@ -9,9 +9,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from AsukaRobot import pgram, aiohttpsession
-from AsukaRobot.utils.errors import capture_err
-from AsukaRobot.utils.pastebin import paste
+from DevilxRobot import pgram, aiohttpsession
+from DevilxRobot.utils.errors import capture_err
+from DevilxRobot.utils.pastebin import paste
 
 pattern = re.compile(
     r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$"
