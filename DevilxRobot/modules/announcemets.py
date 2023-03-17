@@ -6,8 +6,8 @@ from telegram.ext import CallbackContext
 from telegram.chatmemberupdated import ChatMemberUpdated
 from telegram.ext.chatmemberhandler import ChatMemberHandler
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.log_channel import loggable
+from DevilxRobot import dispatcher
+from DevilxRobot.modules.log_channel import loggable
 
 import AsukaRobot.modules.sql.logger_sql as sql
 
