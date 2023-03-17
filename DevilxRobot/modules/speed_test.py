@@ -1,16 +1,16 @@
 import speedtest
-from AsukaRobot import DEV_USERS, dispatcher
-from AsukaRobot.modules.helper_funcs.chat_status import dev_plus
+from DevilxRobot import DEV_USERS, dispatcher
+from DevilxRobot.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext
-from AsukaRobot.modules.helper_funcs.decorators import Asukacmd, Asukacallback
+from DevilxRobot.modules.helper_funcs.decorators import Asukacmd, Asukacallback
 
 
 def convert(speed):
     return round(int(speed) / 1048576, 2)
 
 
-@Asukacmd(command='speedtest')
+@DevilxRobotcmd(command='speedtest')
 @dev_plus
 def speedtestxyz(update: Update, context: CallbackContext):
     buttons = [
@@ -24,7 +24,7 @@ def speedtestxyz(update: Update, context: CallbackContext):
     )
 
 
-@Asukacallback(pattern="speedtest_.*")
+@DevilxRobotcallback(pattern="speedtest_.*")
 def speedtestxyz_callback(update: Update, context: CallbackContext):
     query = update.callback_query
 
