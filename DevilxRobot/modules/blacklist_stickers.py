@@ -1,18 +1,18 @@
 import html
 from typing import Optional
 
-import AsukaRobot.modules.sql.blsticker_sql as sql
-from AsukaRobot import LOGGER, dispatcher
-from AsukaRobot.modules.connection import connected
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.alternate import send_message
-from AsukaRobot.modules.helper_funcs.chat_status import (user_admin,
+import DevilxRobot.modules.sql.blsticker_sql as sql
+from DevilxRobot import LOGGER, dispatcher
+from DevilxRobot.modules.connection import connected
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.alternate import send_message
+from DevilxRobot.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from AsukaRobot.modules.helper_funcs.misc import split_message
-from AsukaRobot.modules.helper_funcs.string_handling import extract_time
+from DevilxRobot.modules.helper_funcs.misc import split_message
+from DevilxRobot.modules.helper_funcs.string_handling import extract_time
 
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.warns import warn
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.warns import warn
 from telegram import (Chat, Message, ParseMode, Update, User, ChatPermissions)
 from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CommandHandler, Filters,
