@@ -1,4 +1,4 @@
-from AsukaRobot import LOAD, LOGGER, NO_LOAD
+from DevilxRobot import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
