@@ -24,7 +24,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
     
-from AsukaRobot import (
+from DevilxRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -37,18 +37,18 @@ from AsukaRobot import (
     StartTime,
     SUPPORT_CHAT
 )
-from AsukaRobot.__main__ import STATS, TOKEN, USER_INFO
-from AsukaRobot.modules.sql import SESSION
-import AsukaRobot.modules.sql.userinfo_sql as sql
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.sql.global_bans_sql import is_user_gbanned
-from AsukaRobot.modules.redis.afk_redis import is_user_afk, afk_reason
-from AsukaRobot.modules.sql.users_sql import get_user_num_chats
-from AsukaRobot.modules.helper_funcs.chat_status import sudo_plus
-from AsukaRobot.modules.helper_funcs.extraction import extract_user
-from AsukaRobot import telethn
+from DevilxRobot.__main__ import STATS, TOKEN, USER_INFO
+from DevilxRobot.modules.sql import SESSION
+import DevilxRobot.modules.sql.userinfo_sql as sql
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.sql.global_bans_sql import is_user_gbanned
+from DevilxRobot.modules.redis.afk_redis import is_user_afk, afk_reason
+from DevilxRobot.modules.sql.users_sql import get_user_num_chats
+from DevilxRobot.modules.helper_funcs.chat_status import sudo_plus
+from DevilxRobot.modules.helper_funcs.extraction import extract_user
+from DevilxRobot import telethn
 
-Asuka_IMG = "https://telegra.ph/file/645e0b5ca6382d6d73ab5.jpg"
+Asuka_IMG = "https://telegra.ph/file/a3c26d735cbfa0c4f8b0e.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -240,10 +240,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/AsukaUpdates/4"),
+                             url="https://t.me/Team_Bot_Update/66"),
                        InlineKeyboardButton(
                              text="Disasters",
-                             url="https://t.me/AsukaUpdates/5"),
+                             url="https://t.me/Team_Bot_Update/67"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -331,7 +331,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\n• Disaster Level: Evangelion 2.0"
         disaster_level_present = True
     elif user.id == 5302104643:
-        text += "\n\n• Ace Of Asuka"
+        text += "\n\n• Ace Of DevilxRobot"
         disaster_level_present = True
     elif user.id in WOLVES:
         text += "\n\n• Disaster Level: Evengalion 1.0"
@@ -467,16 +467,18 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/AsukaUpdates)\n\n"
-            + "\n╘══「 by [The Kaizuryu](https://t.me/TheKaizuryu) 」\n",
+            + f"\n\n[🔸 Support](https://t.me/{SUPPORT_CHAT}) | [Updates ✦](https://t.me/Team_Bot_Update)\n\n"
+            + "\n╘══「 Powered By:- [  𓆩𝐒 𝐀 𝐌𓆪™ ](https://t.me/Piro_x_Power) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
-                       InlineKeyboardButton(
-                             text="Repo",
-                             url="t.me/AsukaSupport")
-                     ] 
+                       InlineKeyboardButton(text="🔸 Creator", url="T.me/Tushyweb"),
+                    InlineKeyboardButton(text="Youtuber ✦", url="https://youtu.be/3x8SEGo9NHo"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="🔰 Repository 🔰", url="https://github.com/Official-Afk-xD/DevilxRobot")
+                 ],
                 ]
             ),
         )
@@ -488,18 +490,20 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/AsukaUpdates)\n\n"
+                    + f"\n\n[🔸 Support](https://t.me/{SUPPORT_CHAT}) | [Updates ✦](https://t.me/Team_Bot_Update)\n\n"
                 )
-                + "╘══「 by [The Kaizuryu](https://t.me/TheKaizuryu) 」\n"
+                + "╘══「 Powered By:- [𓆩𝐒 𝐀 𝐌𓆪™ ](https://t.me/Piro_x_Power) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
-                       InlineKeyboardButton(
-                             text="Repo",
-                             url="t.me/AsukaSupport")
-                     ] 
+                    InlineKeyboardButton(text="🔸 Creator", url="T.me/Tushyweb"),
+                    InlineKeyboardButton(text="Youtuber ✦", url="https://youtu.be/3x8SEGo9NHo"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="🔰 Repository 🔰", url="https://github.com/Official-Afk-xD/DevilxRobot")
+                 ],
                 ]
             ),
         )
