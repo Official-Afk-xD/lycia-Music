@@ -4,9 +4,9 @@ import textwrap
 
 import os
 
-from AsukaRobot.events import register
+from DevilxRobot.events import register
 
-from AsukaRobot import (
+from DevilxRobot import (
 
     LOGGER,
 
@@ -16,10 +16,10 @@ from AsukaRobot import (
 
 
 
-from AsukaRobot import telethn as bot
+from DevilxRobot import telethn as bot
 
 
-Credit = "Xelcius" 
+Credit = "Tushyweb" 
 
 
 @register(pattern="^/mmf ?(.*)")
@@ -86,7 +86,7 @@ async def drawText(image_path, text):
 
     else:
 
-        fnt = "./AsukaRobot/resources/default.ttf"
+        fnt = "./DevilxRobot/resources/default.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
