@@ -1,4 +1,4 @@
-# Asuka Example plugin format
+# DevilxRobot Example plugin format
 
 ## Advanced: Decorators
 ```python3
