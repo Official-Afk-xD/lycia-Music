@@ -4,9 +4,9 @@ import aiohttp
 import youtube_dl
 
 from pyrogram import filters
-from AsukaRobot import pbot
+from DevilxRobot import pbot
 from youtube_search import YoutubeSearch
-from AsukaRobot.utils.errors import capture_err
+from DevilxRobot.utils.errors import capture_err
 
 
 def time_to_seconds(time):
@@ -54,7 +54,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎙 **Title**: [{title[:35]}]({link})\n🎬 **Source**: YouTube\n**Duration**: `{duration}`\n **Views**: `{views}`\n **By**: [𝙓𝙚𝙡𝙘𝙞𝙪𝙨](t.me/theKaizuryu)'
+        rep = f'🎙 **Title**: [{title[:35]}]({link})\n🎬 **Source**: YouTube\n**Duration**: `{duration}`\n **Views**: `{views}`\n **By**: [Tushyweb](t.me/Team_Bot_Update)'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
