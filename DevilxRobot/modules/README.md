@@ -3,11 +3,11 @@
 ## Advanced: Decorators
 ```python3
 
-from AsukaRobot.modules.helper_funcs.decorators import Asukacmd
+from DevilxRobot.modules.helper_funcs.decorators import Asukacmd
 from telegram import Update
 from telegram.ext import CallbackContext
 
-@Asukacmd(command='hi', pass_args=True)
+@DevilxRobotcmd(command='hi', pass_args=True)
 def hello(update: Update, context: CallbackContext):
     message = update.effective_message
     message.reply_text("hello")
@@ -24,7 +24,7 @@ __help__ = """
 
 ## Advanced: Pyrogram
 ```python3
-from AsukaRobot import pgram
+from DevilxRobot import pgram
 
 @pgram.on_message(filters.command("hi") & ~filters.edited & ~filters.bot)
 async def hmm(client, message):
@@ -41,8 +41,8 @@ __help__ = """
 ## Advanced: Telethon
 ```python3
 
-from AsukaRobot import telethn
-from AsukaRobot.events import register
+from DevilxRobot import telethn
+from DevilxRobot.events import register
 
 @register(pattern="^/hi$")
 async def hmm(event):
@@ -59,7 +59,7 @@ __help__ = """
 ## Advanced: PTB
 ```python3
 
-from AsukaRobot import dispatcher
+from DevilxRobot import dispatcher
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler
 
