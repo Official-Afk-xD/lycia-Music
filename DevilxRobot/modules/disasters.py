@@ -1,4 +1,4 @@
-#Owned By @TheKaizuryu & @Xelcius
+#
 
 import html
 import json
