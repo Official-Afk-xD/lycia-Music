@@ -48,7 +48,7 @@ from DevilxRobot.modules.helper_funcs.chat_status import sudo_plus
 from DevilxRobot.modules.helper_funcs.extraction import extract_user
 from DevilxRobot import telethn
 
-Asuka_IMG = "https://telegra.ph/file/a3c26d735cbfa0c4f8b0e.jpg"
+DevilxRobot_IMG = "https://telegra.ph/file/a3c26d735cbfa0c4f8b0e.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -463,7 +463,7 @@ def stats(update, context):
     status += "*➢ Uptime:* " + str(botuptime) + "\n"
     try:
         update.effective_message.reply_photo(
-            Asuka_IMG,
+            DevilxRobot_IMG,
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
