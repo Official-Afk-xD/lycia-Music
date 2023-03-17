@@ -8,14 +8,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from AsukaRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from AsukaRobot import REDIS
-from AsukaRobot.modules.users import get_user_id
+from DevilxRobot import dispatcher
+from DevilxRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from DevilxRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from DevilxRobot import REDIS
+from DevilxRobot.modules.users import get_user_id
 
-from AsukaRobot.modules.helper_funcs.alternate import send_message
-from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
+from DevilxRobot.modules.helper_funcs.alternate import send_message
+from DevilxRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
