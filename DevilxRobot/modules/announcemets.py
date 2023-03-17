@@ -9,7 +9,7 @@ from telegram.ext.chatmemberhandler import ChatMemberHandler
 from DevilxRobot import dispatcher
 from DevilxRobot.modules.log_channel import loggable
 
-import AsukaRobot.modules.sql.logger_sql as sql
+import DevilxRobot.modules.sql.logger_sql as sql
 
 # Module to extract and log (optional: send to chat) status changes in chat members using ChatMemberUpdated 
 # https://github.com/python-telegram-bot/python-telegram-bot/blob/master/examples/chatmemberbot.py
