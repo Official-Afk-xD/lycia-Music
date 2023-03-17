@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import AsukaRobot.modules.sql.blacklist_sql as sql
-from AsukaRobot import dispatcher, LOGGER
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from AsukaRobot.modules.helper_funcs.extraction import extract_text
-from AsukaRobot.modules.helper_funcs.misc import split_message
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.warns import warn
-from AsukaRobot.modules.helper_funcs.string_handling import extract_time
-from AsukaRobot.modules.connection import connected
+import DevilxRobot.modules.sql.blacklist_sql as sql
+from DevilxRobot import dispatcher, LOGGER
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from DevilxRobot.modules.helper_funcs.extraction import extract_text
+from DevilxRobot.modules.helper_funcs.misc import split_message
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.warns import warn
+from DevilxRobot.modules.helper_funcs.string_handling import extract_time
+from DevilxRobot.modules.connection import connected
 
-from AsukaRobot.modules.helper_funcs.alternate import send_message, typing_action
+from DevilxRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
