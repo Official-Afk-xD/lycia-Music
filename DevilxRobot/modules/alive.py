@@ -9,19 +9,19 @@ from io import BytesIO
 from datetime import datetime
 import random
 from telethon import events, Button, custom, version
-from AsukaRobot.events import register
-from AsukaRobot import telethn as borg, OWNER_ID, OWNER_NAME
-from AsukaRobot import StartTime, dispatcher
+from DevilxRobot.events import register
+from DevilxRobot import telethn as borg, OWNER_ID, OWNER_NAME
+from DevilxRobot import StartTime, dispatcher
 from telethon.tl.types import ChannelParticipantsAdmins
 from pyrogram import __version__ as pyro
 
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg"
-file2 = "https://telegra.ph/file/3b4eed00be4dfaa189fff.jpg"
-file3 = "https://telegra.ph/file/0b5e88c90238c357641a7.jpg"
-file4 = "https://telegra.ph/file/4e964395ea9138c943dce.jpg"
+file1 = "https://telegra.ph/file/58ab61861cf8d5638e801.jpg"
+file2 = "https://telegra.ph/file/8ba762344670dfe6b532b.jpg"
+file3 = "https://telegra.ph/file/3378e076435eb708f4a1f.jpg"
+file4 = "https://telegra.ph/file/58ab61861cf8d5638e801.jpg"
 """ =======================CONSTANTS====================== """
 
 START_TIME = datetime.utcnow()
@@ -51,18 +51,18 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    Asuka = f"• **Hey [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm Asuka**\n"
-    Asuka += f"• **My Uptime** - `{uptime}`\n"
-    Asuka += f"• **Telethon Version** - `{version.__version__}`\n"
-    Asuka += f"• **PTB Version** - `{telegram.__version__}`\n"
-    Asuka += f"• **Pyrogram Version** - `{pyro}`\n"
-    Asuka += f"• **My Master** - [Xelcius](tg://user?id={OWNER_ID})\n\n"
-    Asuka += f"Thanks For Adding Me In {yes.chat.title}"
-    BUTTON = [[Button.url("Support Chat", "https://t.me/AsukaSupport"), Button.url("Updates", "https://t.me/AsukaUpdates")]]
-    on = await borg.send_file(yes.chat_id, file="https://telegra.ph/file/d03f381c8178a8fd2dc27.jpg",caption=Asuka, buttons=BUTTON)
+    DevilxRobot = f"┗ **Hey [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm DevilxRobot**\n"
+    DevilxRobot += f"┗ **My Uptime** - `{uptime}`\n"
+    DevilxRobot += f"┗ **Telethon Version** - `{version.__version__}`\n"
+    DevilxRobot += f"┗ **PTB Version** - `{telegram.__version__}`\n"
+    DevilxRobot += f"┗ **Pyrogram Version** - `{pyro}`\n"
+    DevilxRobot += f"┗ **My Master** - [𓆩𝐒 𝐀 𝐌𓆪™](tg://user?id={OWNER_ID})\n\n"
+    DevilxRobot += f"┗ Thanks For Adding Me In {yes.chat.title}"
+    BUTTON = [[Button.url("🚑 Support", "https://t.me/Team_Bot_Support"), Button.url("Updates 📢", "https://t.me/Team_Bot_Update")]]
+    on = await borg.send_file(yes.chat_id, file="https://telegra.ph/file/58ab61861cf8d5638e801.jpg",caption=DevilxRobot, buttons=BUTTON)
 
 @register(pattern=("/repo"))
 async def repo(event):
-    Asuka = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
-    BUTTON = [[Button.url("GitHub", "https://github.com/RimuruDemonlord/AsukaRobot"), Button.url("Developer", "https://t.me/Xelcius")]]
-    await borg.send_file(event.chat_id, file="https://telegra.ph/file/64adcb1bb932846962ab0.jpg", caption=Asuka, buttons=BUTTON)
+    Asuka = f"**┗ Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
+    BUTTON = [[Button.url("GitHub", "https://github.com/Official-Afk-xD/DevilxRobot"), Button.url("Developer ❔", "https://t.me/piro_x_power")]]
+    await borg.send_file(event.chat_id, file="https://telegra.ph/file/58ab61861cf8d5638e801.jpg", caption=DevilxRobot, buttons=BUTTON)
