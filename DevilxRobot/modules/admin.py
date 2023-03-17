@@ -12,9 +12,9 @@ from telethon.errors import *
 from telethon.tl import *
 from telethon import *
 
-from AsukaRobot import DRAGONS, dispatcher, telethn as bot
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.chat_status import (
+from DevilxRobot import DRAGONS, dispatcher, telethn as bot
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -27,12 +27,12 @@ from AsukaRobot.modules.helper_funcs.chat_status import (
     can_manage_voice_chats,
 )
 
-from AsukaRobot.modules.helper_funcs.extraction import (
+from DevilxRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.helper_funcs.alternate import send_message
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.helper_funcs.alternate import send_message
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
