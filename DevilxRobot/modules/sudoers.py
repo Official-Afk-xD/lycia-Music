@@ -7,9 +7,9 @@ import time
 import psutil
 from pyrogram import filters
 
-from AsukaRobot import (StartTime, DEV_USERS, pgram)
-import AsukaRobot.utils.formatter as formatter
-import AsukaRobot.modules.sql.users_sql as sql
+from DevilxRobot import (StartTime, DEV_USERS, pgram)
+import DevilxRobot.utils.formatter as formatter
+import DevilxRobot.modules.sql.users_sql as sql
 
 
 
@@ -25,7 +25,7 @@ async def bot_sys_stats():
     users = sql.num_users()
     chats = sql.num_chats()
     stats = f"""
-➢ Asuka's Current System Stats
+➢ DevilxRobot's Current System Stats
 
 ────────────────────────
 • UPTIME: {formatter.get_readable_time((bot_uptime))}
