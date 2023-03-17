@@ -51,11 +51,11 @@ def inlinequery(update: Update, _) -> None:
     results: List = []
     inline_help_dicts = [
         {
-            "title": "Hentai",
-            "description": "Get Hentai And Pornhwa Channel Link",
+            "title": "Channel",
+            "description": "Get Channel Link",
             "message_text": "Click the button below to get the links.",
             "thumb_urL": "https://telegra.ph/file/2466b0d2e524b8d47a73d.jpg",
-            "keyboard": ".hentai",
+            "keyboard": ".Devil",
         },
          {
             "title": "Anime Cruise",
@@ -67,21 +67,21 @@ def inlinequery(update: Update, _) -> None:
         {
             "title": "DevilxRobot",
             "description": "DevilxRobot Inline",
-            "message_text": "Click the button below to get the Asuka Inline.",
+            "message_text": "Click the button below to get the DevilxRobot Inline.",
             "thumb_urL": "https://telegra.ph/file/93b575c4c4da42d9fa4b2.jpg",
-            "keyboard": ".asuka",
+            "keyboard": ".DevilxRobot",
         },
         {
-            "title": "Kaizuryu",
+            "title": "Tushyweb",
             "description": "The Kaizuryu",
-            "message_text": "Click the button below to get the Kaizuryu Network Info.",
+            "message_text": "Click the button below to get the Info.",
             "thumb_urL": "https://telegra.ph/file/5daac1fcf88ca6f177ef4.jpg",
-            "keyboard": ".kaizuryu",
+            "keyboard": ".Tushyweb",
         },
         {
-            "title": "Account info on Asuka",
-            "description": "Look up a Telegram account in Asuka database",
-            "message_text": "Click the button below to look up a person in Asuka database using their Telegram ID",
+            "title": "Account info on DevilxRobot",
+            "description": "Look up a Telegram account in DevilxRobot database",
+            "message_text": "Click the button below to look up a person in DevilxRobot database using their Telegram ID",
             "thumb_urL": "https://telegra.ph/file/3c93a66c6751088a00fbd.jpg",
             "keyboard": ".info",
         },
@@ -103,10 +103,9 @@ def inlinequery(update: Update, _) -> None:
 
     inline_funcs = {
         ".info": inlineinfo,
-        ".hentai": hentai,
-        ".asuka": asuka,  
+        ".DevilxRobot": DevilxRobot,  
         ".anime": anime,
-        ".kaizuryu": kaizuryu,
+        ".Tushyweb": Tushyweb,
         ".anilist": media_query,
         ".help": help,
     }
@@ -276,7 +275,7 @@ def hentai(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultPhoto(
             id=str(uuid4()),
             title="Tushyweb",
-            description="Get Hentai Channel Link",
+            description="Get Channel Link",
             thumb_url="https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg",
             photo_url="https://telegra.ph/file/3378e076435eb708f4a1f.jpg",
             caption=about_text,
@@ -293,26 +292,26 @@ def asuka(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    ──── • Asuka Langley Soryu • ────
+    ──── • DevilxRobot  • ────
     """
     results: list = []
     kb = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="Asuka Robot",
-                    url=f"https://t.me/AsukaRobot",
+                    text="DevilxRobot",
+                    url=f"https://t.me/Devil_x_Robot",
                 ),
 
             ],
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/AsukaSupport",
+                    url=f"https://t.me/Team_Bot_Support",
                 ),
                  InlineKeyboardButton(
                     text="Updates",
-                    url=f"https://t.me/AsukaUpdates",
+                    url=f"https://t.me/Team_Bot_Updates",
                 ),
 
             ],
@@ -328,8 +327,8 @@ def asuka(query: str, update: Update, context: CallbackContext) -> None:
     results.append(
         InlineQueryResultPhoto(
             id=str(uuid4()),
-            title="Asuka",
-            description="Get Asuka Inline",
+            title="DevilxRobot",
+            description="Get DevilxRobot Inline",
             thumb_url="https://telegra.ph/file/62ad4ddfcb9ec5189a590.jpg",
             photo_url="https://telegra.ph/file/f6be5a2866ae719a17fb0.jpg",
             caption=about_text,
@@ -458,7 +457,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="https://t.me/AsukaSupport",
+                        url="https://t.me/Team_Bot_Support",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
@@ -490,7 +489,7 @@ def help(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     help_text = f"""
-     [Asuka Inline Help](https://t.me/AsukaRobot)\n*Inline Help Commands:*\n*• .hentai:* `You Can Get Hentai Links`\n*• .kaizuryu* `To Check Out Kaizuryu Network`\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`\n• Want your own inline on @AsukaRobot? You can get it in low pricing by contacting @Xelcius
+     [DevilxRobot Inline Help](https://t.me/Devil_x_Robot)\n*Inline Help Commands:*\n*• .hentai:* `You Can Get Links`\n*• .Tushyweb* `To Check Out Blaze Network`\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`\n• Want your own inline on @Devil_x_Robot? You can get it in low pricing by contacting @Tushyweb
      """
     results: list = []
     kb = InlineKeyboardMarkup(
@@ -549,15 +548,15 @@ def kaizuryu(query: str, update: Update, context: CallbackContext) -> None:
         [
             [
                 InlineKeyboardButton(
-                    text="Kaizuryu Network",
-                    url=f"https://t.me/TheKaizuryu",
+                    text="Blaze Network",
+                    url=f"https://t.me/Theblazenetwork",
                 ),
 
             ],
             [
                 InlineKeyboardButton(
                     text="Chat Group",
-                    url=f"https://t.me/+RH-EofbQPhwyNGE1",
+                    url=f"https://t.me/Team_Bot_Support",
                 ),
 
             ],
@@ -566,8 +565,8 @@ def kaizuryu(query: str, update: Update, context: CallbackContext) -> None:
     results.append(
         InlineQueryResultPhoto(
             id=str(uuid4()),
-            title="Kaizuryu",
-            description="Get Kaizuryu Network Link",
+            title="Tushyweb",
+            description="Get Network Link",
             thumb_url="https://telegra.ph/file/5daac1fcf88ca6f177ef4.jpg",
             photo_url="https://telegra.ph/file/5daac1fcf88ca6f177ef4.jpg",
             caption=about_text,
@@ -584,7 +583,7 @@ def anime(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    ‣ Anime Cruise • Kaizuryu \n\n• Uploading All The Latest Animes \n• Best Quality, Low Size Encoded \n• One Tap Channel Access
+    ‣ Anime Cruise • \n\n• Uploading All The Latest Animes \n• Best Quality, Low Size Encoded \n• One Tap Channel Access
     """
     results: list = []
     kb = InlineKeyboardMarkup(
@@ -592,14 +591,14 @@ def anime(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Join Now",
-                    url=f"https://t.me/Anime_Cruise",
+                    url=f"https://t.me/Team_Bot_update",
                 ),
 
             ],
             [
                 InlineKeyboardButton(
                     text="Index",
-                    url=f"https://t.me/Cruise_Index",
+                    url=f"https://t.me/Team_Bot_Support",
                 ),
 
             ],
