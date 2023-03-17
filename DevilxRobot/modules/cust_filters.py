@@ -13,23 +13,23 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from AsukaRobot import DRAGONS, LOGGER, dispatcher
-from AsukaRobot.modules.connection import connected
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.alternate import send_message, typing_action
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin
-from AsukaRobot.modules.helper_funcs.extraction import extract_text
-from AsukaRobot.modules.helper_funcs.filters import CustomFilters
-from AsukaRobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from AsukaRobot.modules.helper_funcs.misc import build_keyboard_parser
-from AsukaRobot.modules.helper_funcs.msg_types import get_filter_type
-from AsukaRobot.modules.helper_funcs.string_handling import (
+from DevilxRobot import DRAGONS, LOGGER, dispatcher
+from DevilxRobot.modules.connection import connected
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.alternate import send_message, typing_action
+from DevilxRobot.modules.helper_funcs.chat_status import user_admin
+from DevilxRobot.modules.helper_funcs.extraction import extract_text
+from DevilxRobot.modules.helper_funcs.filters import CustomFilters
+from DevilxRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from DevilxRobot.modules.helper_funcs.misc import build_keyboard_parser
+from DevilxRobot.modules.helper_funcs.msg_types import get_filter_type
+from DevilxRobot.modules.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
     split_quotes,
 )
-from AsukaRobot.modules.sql import cust_filters_sql as sql
+from DevilxRobot.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 
