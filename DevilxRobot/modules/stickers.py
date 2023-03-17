@@ -10,9 +10,9 @@ from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       TelegramError, Update, constants)
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.gifkang import convert_gif
+from DevilxRobot import dispatcher
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.gifkang import convert_gif
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
