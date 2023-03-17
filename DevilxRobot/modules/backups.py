@@ -16,7 +16,7 @@ import DevilxRobot.modules.sql.rules_sql as rulessql
 
 # from NekoRobot.modules.sql import warns_sql as warnssql
 import DevilxRobot.modules.sql.blacklist_sql as blacklistsql
-from AsukaRobot.modules.sql import disable_sql as disabledsql
+from DevilxRobot.modules.sql import disable_sql as disabledsql
 
 # from NekoRobot.modules.sql import cust_filters_sql as filtersql
 # import NekoRobot.modules.sql.welcome_sql as welcsql
