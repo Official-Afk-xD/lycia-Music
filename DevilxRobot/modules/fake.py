@@ -7,8 +7,8 @@ from faker import Faker
 from faker.providers import internet
 from telethon import events
 
-from AsukaRobot.utils.pluginhelpers import is_admin
-from AsukaRobot import telethn, SUPPORT_CHAT
+from DevilxRobot.utils.pluginhelpers import is_admin
+from DevilxRobot import telethn, SUPPORT_CHAT
 
 
 @telethn.on(events.NewMessage(pattern="/fakegen$"))
@@ -53,4 +53,4 @@ async def _(event):
         fole = "FRIDAYOT.jpg"
         await telethn.send_file(event.chat_id, fole, caption=captin)
         await event.delete()
-        os.system("rm ./Asuka_picgen.jpg ")
+        os.system("rm ./DevilxRobot_picgen.jpg ")
