@@ -1,6 +1,6 @@
-from AsukaRobot import *
-from AsukaRobot import LOGGER
-from AsukaRobot.events import register
+from DevilxRobot import *
+from DevilxRobot import LOGGER
+from DevilxRobot.events import register
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -20,7 +20,7 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-sudo = 5132611794
+sudo = 5052969674
 BOT_ID = 1241223850
 CMD_HELP = '/ !'
 
