@@ -1,10 +1,10 @@
 import html
 
-from AsukaRobot import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
-from AsukaRobot.modules.helper_funcs.chat_status import (user_admin,
+from DevilxRobot import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
+from DevilxRobot.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.sql import reporting_sql as sql
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.sql import reporting_sql as sql
 from telegram import (Chat, InlineKeyboardButton, InlineKeyboardMarkup,
                       ParseMode, Update)
 from telegram.error import BadRequest, Unauthorized
