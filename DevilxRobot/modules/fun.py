@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import AsukaRobot.modules.fun_strings as fun_strings
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.chat_status import is_user_admin
-from AsukaRobot.modules.helper_funcs.extraction import extract_user
+import DevilxRobot.modules.fun_strings as fun_strings
+from DevilxRobot import dispatcher
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.chat_status import is_user_admin
+from DevilxRobot.modules.helper_funcs.extraction import extract_user
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions, ParseMode, Update)
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
@@ -16,34 +16,19 @@ GIF_ID = "CgACAgQAAxkBAAILHWBPN8dL8NvxZ9tUfr3_4SdPGqgjAAJeAgACQQrNUlM24z1ISCsTHg
 henbuttons = [
     [
                         InlineKeyboardButton(
-                             text="Uncensored Hentai",
-                             url="https://t.me/Uncensored_Hemtai"),
+                             text="Channel",
+                             url="https://t.me/Team_Bot_Update"),
                     ],                
                    [ 
                        InlineKeyboardButton(
-                             text="Pornhwa",
-                             url="https://t.me/PornhwaHeaven"),                  
+                             text="Group",
+                             url="https://t.me/Team_Bot_Support"),                  
                        InlineKeyboardButton(
-                             text="Chat",
-                             url="https://t.me/Hentai_Chat_Hanime"),
+                             text="Youtube",
+                             url="https://youtube.com/@Harsh-shukla-xD"),
                    ],
     ]
 
-anibuttons = [
-    [
-                        InlineKeyboardButton(
-                             text="Anime Cruise",
-                             url="https://t.me/Anime_Cruise"),
-                    ],                
-                   [ 
-                       InlineKeyboardButton(
-                             text="Index",
-                             url="https://t.me/Cruise_Index"),                  
-                       InlineKeyboardButton(
-                             text="Chat",
-                             url="https://t.me/Anime_Chat_Kaizuryu"),
-                   ],
-    ]
 
 @run_async
 def runs(update: Update, context: CallbackContext):
@@ -129,7 +114,7 @@ def slap(update: Update, context: CallbackContext):
     throw = random.choice(fun_strings.THROW)
 
     if update.effective_user.id == 1096215023:
-        temp = "@NeoTheKitty scratches {user2}"
+        temp = "@Tushyweb scratches {user2}"
 
     reply = temp.format(
         user1=user1, user2=user2, item=item, hits=hit, throws=throw)
