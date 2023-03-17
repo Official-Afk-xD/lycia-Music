@@ -1,11 +1,11 @@
 import html
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot import dispatcher, DRAGONS
-from AsukaRobot.modules.helper_funcs.extraction import extract_user
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot import dispatcher, DRAGONS
+from DevilxRobot.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
-import AsukaRobot.modules.sql.approve_sql as sql
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin
-from AsukaRobot.modules.log_channel import loggable
+import DevilxRobot.modules.sql.approve_sql as sql
+from DevilxRobot.modules.helper_funcs.chat_status import user_admin
+from DevilxRobot.modules.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
