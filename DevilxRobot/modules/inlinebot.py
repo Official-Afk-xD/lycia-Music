@@ -19,8 +19,8 @@ from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.utils.helpers import mention_html
-import AsukaRobot.modules.sql.users_sql as sql
-from AsukaRobot import (
+import DevilxRobot.modules.sql.users_sql as sql
+from DevilxRobot import (
     OWNER_ID,
     DRAGONS,
     DEMONS,
@@ -30,9 +30,9 @@ from AsukaRobot import (
     pgram,
     sw, LOGGER
 )
-from AsukaRobot.modules.helper_funcs.misc import article
-from AsukaRobot.modules.helper_funcs.decorators import Asukainline
-from AsukaRobot.modules.sudoers import bot_sys_stats as bss
+from DevilxRobot.modules.helper_funcs.misc import article
+from DevilxRobot.modules.helper_funcs.decorators import Asukainline
+from DevilxRobot.modules.sudoers import bot_sys_stats as bss
 
 
 def remove_prefix(text, prefix):
@@ -40,7 +40,7 @@ def remove_prefix(text, prefix):
         text = text.replace(prefix, "", 1)
     return text
 
-@Asukainline()
+@DevilxRobotinline()
 def inlinequery(update: Update, _) -> None:
     """
     Main InlineQueryHandler callback.
@@ -65,8 +65,8 @@ def inlinequery(update: Update, _) -> None:
             "keyboard": ".anime",
         },
         {
-            "title": "Asuka",
-            "description": "AsukaRobot Inline",
+            "title": "DevilxRobot",
+            "description": "DevilxRobot Inline",
             "message_text": "Click the button below to get the Asuka Inline.",
             "thumb_urL": "https://telegra.ph/file/93b575c4c4da42d9fa4b2.jpg",
             "keyboard": ".asuka",
@@ -219,7 +219,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/AsukaSupport",
+                    url=f"https://t.me/Team_Bot_Support",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -233,7 +233,7 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
     results = [
         InlineQueryResultArticle(
             id=str(uuid4()),
-            thumb_url="https://telegra.ph/file/0b5e88c90238c357641a7.jpg",
+            thumb_url="https://telegra.ph/file/8ba762344670dfe6b532b.jpg",
             title=f"User info of {html.escape(user.first_name)}",
             input_message_content=InputTextMessageContent(text, parse_mode=ParseMode.HTML,
                                                           disable_web_page_preview=True),
@@ -251,22 +251,22 @@ def hentai(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    • [Hentai Forever](https://t.me/+S6Kq1YC5bxkwZjgx) \n• [Pornhwa Heaven](https://t.me/+jKF-knaR0LE5MzYx) \n• [Hentai Chat Group](https://t.me/+TOAvpiqpUeoxMzdh)
+    • [Group](https://t.me/Team_Bot_Support) \n• [Channel](https://t.me/Team_Bot_Update) \n• [Youtube](https://youtube.com/@Harsh-shukla-xD)
     """
     results: list = []
     kb = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="Hentai",
-                    url=f"https://t.me/+S6Kq1YC5bxkwZjgx",
+                    text="Youtube",
+                    url=f"https://youtube.com/@Harsh-shukla-xD",
                 ),
 
             ],
             [
                 InlineKeyboardButton(
-                    text="Pornhwa",
-                    url=f"https://t.me/+jKF-knaR0LE5MzYx",
+                    text="Creator",
+                    url=f"https://t.me/Piro_x_power",
                 ),
 
             ],
@@ -275,10 +275,10 @@ def hentai(query: str, update: Update, context: CallbackContext) -> None:
     results.append(
         InlineQueryResultPhoto(
             id=str(uuid4()),
-            title="Hentai",
+            title="Tushyweb",
             description="Get Hentai Channel Link",
-            thumb_url="https://telegra.ph/file/2466b0d2e524b8d47a73d.jpg",
-            photo_url="https://telegra.ph/file/2466b0d2e524b8d47a73d.jpg",
+            thumb_url="https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg",
+            photo_url="https://telegra.ph/file/3378e076435eb708f4a1f.jpg",
             caption=about_text,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=kb,
