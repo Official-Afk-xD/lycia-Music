@@ -16,10 +16,10 @@ from telegram.utils.helpers import mention_html
 from typing import Optional, List
 from telegram import TelegramError
 
-import AsukaRobot.modules.sql.users_sql as sql
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.filters import CustomFilters
-from AsukaRobot import (
+import DevilxRobot.modules.sql.users_sql as sql
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.helper_funcs.filters import CustomFilters
+from DevilxRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -29,7 +29,7 @@ from AsukaRobot import (
     WOLVES,
     dispatcher,
 )
-from AsukaRobot.modules.helper_funcs.chat_status import (
+from DevilxRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     bot_admin,
     can_restrict,
@@ -42,9 +42,9 @@ from AsukaRobot.modules.helper_funcs.chat_status import (
     can_delete,
     dev_plus,
 )
-from AsukaRobot.modules.helper_funcs.extraction import extract_user_and_text
-from AsukaRobot.modules.helper_funcs.string_handling import extract_time
-from AsukaRobot.modules.log_channel import gloggable, loggable
+from DevilxRobot.modules.helper_funcs.extraction import extract_user_and_text
+from DevilxRobot.modules.helper_funcs.string_handling import extract_time
+from DevilxRobot.modules.log_channel import gloggable, loggable
 
 
 
