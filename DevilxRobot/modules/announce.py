@@ -4,14 +4,14 @@ from telegram import Update
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.helper_funcs.decorators import Asukacmd
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.helper_funcs.decorators import Asukacmd
 
-import AsukaRobot.modules.sql.logger_sql as sql
-from AsukaRobot.modules.helper_funcs.anonymous import user_admin as u_admin, AdminPerms
+import DevilxRobot.modules.sql.logger_sql as sql
+from DevilxRobot.modules.helper_funcs.anonymous import user_admin as u_admin, AdminPerms
 
 
-@Asukacmd(command="announce", pass_args=True)
+@DevilxRobotcmd(command="announce", pass_args=True)
 @u_admin(AdminPerms.CAN_CHANGE_INFO)
 @loggable
 def announcestat(update: Update, context: CallbackContext) -> str:
