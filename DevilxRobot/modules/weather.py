@@ -1,4 +1,4 @@
-from AsukaRobot import telethn as tbot
+from DevilxRobot import telethn as tbot
 import io
 import os
 import time
