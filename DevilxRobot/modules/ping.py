@@ -5,7 +5,7 @@ import re
 import os
 import asyncio
 from typing import List
-from AsukaRobot.modules.sudoers import bot_sys_stats
+from DevilxRobot.modules.sudoers import bot_sys_stats
 
 import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
@@ -18,9 +18,9 @@ from telegram.ext import (
     MessageHandler,
 )
 
-from AsukaRobot import StartTime, dispatcher, pgram
+from DevilxRobot import StartTime, dispatcher, pgram
 from pyrogram import filters
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from DevilxRobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
@@ -29,7 +29,7 @@ sites_list = {
     "Jikan": "https://api.jikan.moe/v3"
 }
 
-PING_IMG = "https://telegra.ph/file/2b36ebe595bc664c0e544.jpg"
+PING_IMG = "https://telegra.ph/file/2466b0d2e524b8d47a73d.jpg"
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -147,7 +147,7 @@ dispatcher.add_handler(PINGALL_HANDLER)
 
 
 __help__ = """
-/ping: Asuka pong
+/ping: DevilxRobot pong
 """
 
 __mod_name__ = "Ping"
