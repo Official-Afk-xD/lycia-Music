@@ -1,16 +1,12 @@
-## Made By @Yash-Sharma-1807
-## telegram.dog/YASH_SHARMA_1807?start=papa
-
-
 
 import os
 import time
 from datetime import datetime as dt
 from random import choice
 from shutil import rmtree
-from AsukaRobot import quotly
-from AsukaRobot.services.quotehelper import eor
-from AsukaRobot.events import register  
+from DevilxRobot import quotly
+from DevilxRobot.services.quotehelper import eor
+from DevilxRobot.events import register  
 
 @register(pattern="^/q(?: |$)(.*)")
 async def quott_(event):
