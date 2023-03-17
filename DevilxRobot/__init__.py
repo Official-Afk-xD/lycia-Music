@@ -4,7 +4,7 @@ import sys
 import time
 import spamwatch
 import aiohttp
-from AsukaRobot.services.quoteapi import Quotly
+from DevilxRobot.services.quoteapi import Quotly
 import telegram.ext as tg
 from redis import StrictRedis
 from Python_ARQ import ARQ
@@ -27,7 +27,7 @@ logging.basicConfig(
               logging.StreamHandler()],
     level=logging.INFO)
 
-LOGGER = logging.getLogger("[AsukaRobot]")
+LOGGER = logging.getLogger("[DevilxRobot]")
 
 log = logging.getLogger('[Your Bot Is Building]')
 
@@ -129,7 +129,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
     
 else:
-    from AsukaRobot.config import Development as Config
+    from DevilxRobot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -240,7 +240,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from AsukaRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
+from DevilxRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
                                                         CustomMessageHandler,
                                                         CustomRegexHandler)
 
