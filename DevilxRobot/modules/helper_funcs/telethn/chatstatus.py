@@ -1,5 +1,5 @@
-from AsukaRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from AsukaRobot import DRAGONS
+from DevilxRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from DevilxRobot import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
