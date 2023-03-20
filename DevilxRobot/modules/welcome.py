@@ -8,21 +8,21 @@ import importlib
 from functools import partial
 from pyrogram import Client , filters
 from pyrogram.types import Message
-import AsukaRobot.modules.sql.welcome_sql as sql
-from AsukaRobot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
+import DevilxRobot.modules.sql.welcome_sql as sql
+from DevilxRobot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
                           WOLVES, sw, dispatcher, EVENT_LOGS, JOIN_LOGGER, pgram)
-from AsukaRobot.modules.helper_funcs.chat_status import (
+from DevilxRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from AsukaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from AsukaRobot.modules.helper_funcs.msg_types import get_welcome_type
-from AsukaRobot.modules.helper_funcs.string_handling import (
+from DevilxRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from DevilxRobot.modules.helper_funcs.msg_types import get_welcome_type
+from DevilxRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from AsukaRobot.modules.log_channel import loggable
-from AsukaRobot.modules.sql.global_bans_sql import is_user_gbanned
+from DevilxRobot.modules.log_channel import loggable
+from DevilxRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -40,8 +40,8 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-from AsukaRobot.modules.helper_funcs.misc import paginate_modules
-from AsukaRobot.modules import ALL_MODULES
+from DevilxRobot.modules.helper_funcs.misc import paginate_modules
+from DevilxRobot.modules import ALL_MODULES
 
 VALID_WELCOME_FORMATTERS = [
     "first",
@@ -67,9 +67,9 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
-Asuka_IMG = "https://telegra.ph/file/4f9d3cd448f3d319afca9.mp4"
-Asuka = "https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg"
-Asuka_VID = "https://telegra.ph/file/d7ffd1eae2984b0cfb148.jpg"
+DevilxRobot_IMG = "https://telegra.ph/file/4f9d3cd448f3d319afca9.mp4"
+DevilxRobot = "https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg"
+DevilxRobot_VID = "https://telegra.ph/file/d7ffd1eae2984b0cfb148.jpg"
 WAIFUS_IMG = "https://telegra.ph/file/2b36ebe595bc664c0e544.jpg"
 
 
